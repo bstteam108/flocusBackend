@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "choosing_flocus_kapoks",
+  "info": {
+    "singularName": "choosing-flocus-kapok",
+    "pluralName": "choosing-flocus-kapoks",
+    "displayName": "Choosing Flocus Kapok",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.banner-section"
+      ]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "applications",
+  "info": {
+    "singularName": "application",
+    "pluralName": "applications",
+    "displayName": "application",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.banner-section"
+      ]
+    },
+    "images": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.images"
+    },
+    "cart": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.card"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

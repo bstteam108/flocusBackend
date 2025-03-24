@@ -1,84 +1,61 @@
-Code status:
-------------
+# 🚀 Getting started with Strapi
 
-* [![Appveyor CI status](https://ci.appveyor.com/api/projects/status/4u6pexmtpuf8jq66?svg=true)](https://ci.appveyor.com/project/rasmushoj/server) ci.appveyor.com
+Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
 
-## MariaDB: drop-in replacement for MySQL
+### `develop`
 
-MariaDB is designed as a drop-in replacement of MySQL(R) with more
-features, new storage engines, fewer bugs, and better performance.
+Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
 
-MariaDB is brought to you by the MariaDB Foundation and the MariaDB corporation.
-Please read the CREDITS file for details about the MariaDB Foundation,
-and who is developing MariaDB.
+```
+npm run develop
+# or
+yarn develop
+```
 
-MariaDB is developed by many of the original developers of MySQL who
-now work for the MariaDB Corporation, the MariaDB Foundation and by
-many people in the community.
+### `start`
 
-MySQL, which is the base of MariaDB, is a product and trademark of Oracle
-Corporation, Inc. For a list of developers and other contributors,
-see the Credits appendix.  You can also run 'SHOW authors' to get a
-list of active contributors.
+Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
 
-A description of the MariaDB project and a manual can be found at:
+```
+npm run start
+# or
+yarn start
+```
 
-https://mariadb.com/kb/en/
+### `build`
 
-https://mariadb.com/kb/en/mariadb-vs-mysql-features/
+Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
 
-https://mariadb.com/kb/en/mariadb-versus-mysql-compatibility/
+```
+npm run build
+# or
+yarn build
+```
 
-https://mariadb.com/kb/en/library/new-and-old-releases/
+## ⚙️ Deployment
 
-https://mariadb.org/
+Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
 
-As MariaDB is a full replacement of MySQL, the MySQL manual at
-http://dev.mysql.com/doc is generally applicable.
+```
+yarn strapi deploy
+```
 
-Help
------
+## 📚 Learn more
 
-More help is available from the Maria Discuss mailing list
-https://launchpad.net/~maria-discuss
-and the #maria IRC channel on Freenode.
+- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
+- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
+- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
+- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
+- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
 
-Live QA for beginner contributors
-----
-MariaDB has a dedicated time each week when we answer new contributor questions live on Zulip and IRC.
-From 8:00 to 10:00 UTC on Mondays, and 10:00 to 12:00 UTC on Thursdays,
-anyone can ask any questions they’d like, and a live developer will be available to assist.
+Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
 
-New contributors can ask questions any time, but we will provide immediate feedback during that interval.
+## ✨ Community
 
-Licensing
----------
+- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
+- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
+- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
 
-***************************************************************************
+---
 
-NOTE: 
-
-MariaDB is specifically available only under version 2 of the GNU
-General Public License (GPLv2). (I.e. Without the "any later version"
-clause.) This is inherited from MySQL. Please see the README file in
-the MySQL distribution for more information.
-
-License information can be found in the COPYING file. Third party
-license information can be found in the THIRDPARTY file.
-
-***************************************************************************
-
-Bug Reports
-------------
-
-Bug and/or error reports regarding MariaDB should be submitted at:
-https://jira.mariadb.org
-
-For reporting security vulnerabilities see:
-https://mariadb.org/about/security-policy/
-
-Bugs in the MySQL code can also be submitted at:
-https://bugs.mysql.com
-
-The code for MariaDB, including all revision history, can be found at:
-https://github.com/MariaDB/server
+<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>

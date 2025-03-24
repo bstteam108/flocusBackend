@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "second_pages",
+  "info": {
+    "singularName": "second-page",
+    "pluralName": "second-pages",
+    "displayName": "Second Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.banner-section",
+        "blocks.info-block"
+      ]
+    },
+    "cart": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.card"
+    },
+    "cartSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.card"
+    },
+    "cartTitile": {
+      "type": "string"
+    },
+    "blockSection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.info-block"
+    }
+  }
+}

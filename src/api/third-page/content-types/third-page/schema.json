@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "third_pages",
+  "info": {
+    "singularName": "third-page",
+    "pluralName": "third-pages",
+    "displayName": "Third Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "headding": {
+      "type": "text"
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.banner-section"
+      ]
+    },
+    "images": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.images"
+    },
+    "img": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.images"
+    },
+    "descriptions": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "knowledg_hubs",
+  "info": {
+    "singularName": "knowledg-hub",
+    "pluralName": "knowledg-hubs",
+    "displayName": "Knowledg Hub",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cart": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.card"
+    }
+  }
+}
