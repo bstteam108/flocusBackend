@@ -14,13 +14,11 @@
     "title": {
       "type": "string"
     },
-    "description": {
-      "type": "text"
-    },
-    "cart": {
-      "type": "component",
-      "repeatable": true,
-      "component": "elements.card"
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.banner-section"
+      ]
     }
   }
 }

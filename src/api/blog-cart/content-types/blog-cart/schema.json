@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_carts",
+  "info": {
+    "singularName": "blog-cart",
+    "pluralName": "blog-carts",
+    "displayName": "Blog Cart"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "date": {
+      "type": "date"
+    }
+  }
+}

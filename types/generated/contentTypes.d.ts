@@ -402,6 +402,37 @@ export interface ApiApplicationApplication extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiBlogCartBlogCart extends Struct.CollectionTypeSchema {
+  collectionName: 'blog_carts';
+  info: {
+    displayName: 'Blog Cart';
+    pluralName: 'blog-carts';
+    singularName: 'blog-cart';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.RichText;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::blog-cart.blog-cart'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiChoosingFlocusKapokChoosingFlocusKapok
   extends Struct.SingleTypeSchema {
   collectionName: 'choosing_flocus_kapoks';
@@ -416,6 +447,7 @@ export interface ApiChoosingFlocusKapokChoosingFlocusKapok
   };
   attributes: {
     blocks: Schema.Attribute.DynamicZone<['blocks.banner-section']>;
+    cart: Schema.Attribute.Component<'elements.card-section', true>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -510,11 +542,10 @@ export interface ApiKnowledgHubKnowledgHub extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    cart: Schema.Attribute.Component<'elements.card', true>;
+    blocks: Schema.Attribute.DynamicZone<['blocks.banner-section']>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1109,6 +1140,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::application.application': ApiApplicationApplication;
+      'api::blog-cart.blog-cart': ApiBlogCartBlogCart;
       'api::choosing-flocus-kapok.choosing-flocus-kapok': ApiChoosingFlocusKapokChoosingFlocusKapok;
       'api::global.global': ApiGlobalGlobal;
       'api::home-page.home-page': ApiHomePageHomePage;

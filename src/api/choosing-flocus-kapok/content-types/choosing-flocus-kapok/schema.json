@@ -19,6 +19,11 @@
       "components": [
         "blocks.banner-section"
       ]
+    },
+    "cart": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.card-section"
     }
   }
 }

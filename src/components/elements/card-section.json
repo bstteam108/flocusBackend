@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_elements_card_sections",
+  "info": {
+    "displayName": "CardSection",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "reverse": {
+      "type": "boolean"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.list"
+    }
+  }
+}

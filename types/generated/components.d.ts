@@ -42,6 +42,20 @@ export interface ElementsCard extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsCardSection extends Struct.ComponentSchema {
+  collectionName: 'components_elements_card_sections';
+  info: {
+    description: '';
+    displayName: 'CardSection';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    reverse: Schema.Attribute.Boolean;
+    text: Schema.Attribute.Component<'elements.list', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsImages extends Struct.ComponentSchema {
   collectionName: 'components_elements_images';
   info: {
@@ -66,6 +80,17 @@ export interface ElementsLink extends Struct.ComponentSchema {
     href: Schema.Attribute.String;
     isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     text: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsList extends Struct.ComponentSchema {
+  collectionName: 'components_elements_lists';
+  info: {
+    description: '';
+    displayName: 'list';
+  };
+  attributes: {
+    list: Schema.Attribute.Text;
   };
 }
 
@@ -111,8 +136,10 @@ declare module '@strapi/strapi' {
       'blocks.banner-section': BlocksBannerSection;
       'blocks.info-block': BlocksInfoBlock;
       'elements.card': ElementsCard;
+      'elements.card-section': ElementsCardSection;
       'elements.images': ElementsImages;
       'elements.link': ElementsLink;
+      'elements.list': ElementsList;
       'elements.logo': ElementsLogo;
       'layout.footer': LayoutFooter;
       'layout.header': LayoutHeader;
