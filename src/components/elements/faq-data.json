@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_elements_faq_data",
+  "info": {
+    "displayName": "Faq-data"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "faqData": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.faq"
+    }
+  }
+}

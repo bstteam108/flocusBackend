@@ -23,6 +23,12 @@
         "blocks.banner-section",
         "blocks.info-block"
       ]
+    },
+    "metaTitle": {
+      "type": "text"
+    },
+    "metaDescription": {
+      "type": "text"
     }
   }
 }

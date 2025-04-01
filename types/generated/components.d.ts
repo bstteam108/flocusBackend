@@ -3,11 +3,12 @@ import type { Schema, Struct } from '@strapi/strapi';
 export interface BlocksBannerSection extends Struct.ComponentSchema {
   collectionName: 'components_blocks_banner_sections';
   info: {
+    description: '';
     displayName: 'Banner Section';
   };
   attributes: {
     headdin: Schema.Attribute.String;
-    image: Schema.Attribute.Media<'images'>;
+    image: Schema.Attribute.Media<'images' | 'videos'>;
     logo: Schema.Attribute.Component<'elements.logo', false>;
   };
 }
@@ -53,6 +54,29 @@ export interface ElementsCardSection extends Struct.ComponentSchema {
     reverse: Schema.Attribute.Boolean;
     text: Schema.Attribute.Component<'elements.list', true>;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface ElementsFaq extends Struct.ComponentSchema {
+  collectionName: 'components_elements_faqs';
+  info: {
+    displayName: 'Faq';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText;
+    heading: Schema.Attribute.Text;
+  };
+}
+
+export interface ElementsFaqData extends Struct.ComponentSchema {
+  collectionName: 'components_elements_faq_data';
+  info: {
+    displayName: 'Faq-data';
+  };
+  attributes: {
+    faqData: Schema.Attribute.Component<'elements.faq', true>;
+    image: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.Text;
   };
 }
 
@@ -137,6 +161,8 @@ declare module '@strapi/strapi' {
       'blocks.info-block': BlocksInfoBlock;
       'elements.card': ElementsCard;
       'elements.card-section': ElementsCardSection;
+      'elements.faq': ElementsFaq;
+      'elements.faq-data': ElementsFaqData;
       'elements.images': ElementsImages;
       'elements.link': ElementsLink;
       'elements.list': ElementsList;

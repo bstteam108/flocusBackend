@@ -1,29 +1,27 @@
 {
   "kind": "singleType",
-  "collectionName": "choosing_flocus_kapoks",
+  "collectionName": "conditions_of_uses",
   "info": {
-    "singularName": "choosing-flocus-kapok",
-    "pluralName": "choosing-flocus-kapoks",
-    "displayName": "Choosing Flocus Kapok",
+    "singularName": "conditions-of-use",
+    "pluralName": "conditions-of-uses",
+    "displayName": "Conditions of Use",
     "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "title": {
+    "heading": {
       "type": "string"
+    },
+    "description": {
+      "type": "richtext"
     },
     "blocks": {
       "type": "dynamiczone",
       "components": [
         "blocks.banner-section"
       ]
-    },
-    "cart": {
-      "type": "component",
-      "repeatable": true,
-      "component": "elements.card-section"
     },
     "metaTitle": {
       "type": "text"

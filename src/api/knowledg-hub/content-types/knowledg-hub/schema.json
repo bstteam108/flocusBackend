@@ -19,6 +19,12 @@
       "components": [
         "blocks.banner-section"
       ]
+    },
+    "metaTitle": {
+      "type": "text"
+    },
+    "metaDescription": {
+      "type": "text"
     }
   }
 }
