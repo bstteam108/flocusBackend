@@ -387,6 +387,7 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     description: Schema.Attribute.RichText;
     heading: Schema.Attribute.String;
+    keyWords: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -421,6 +422,7 @@ export interface ApiApplicationApplication extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     description: Schema.Attribute.RichText;
     images: Schema.Attribute.Component<'elements.images', false>;
+    keyWords: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -440,6 +442,7 @@ export interface ApiApplicationApplication extends Struct.SingleTypeSchema {
 export interface ApiBlogCartBlogCart extends Struct.CollectionTypeSchema {
   collectionName: 'blog_carts';
   info: {
+    description: '';
     displayName: 'Blog Cart';
     pluralName: 'blog-carts';
     singularName: 'blog-cart';
@@ -486,6 +489,7 @@ export interface ApiChoosingFlocusKapokChoosingFlocusKapok
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    keyWords: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -521,6 +525,7 @@ export interface ApiConditionsOfUseConditionsOfUse
       Schema.Attribute.Private;
     description: Schema.Attribute.RichText;
     heading: Schema.Attribute.String;
+    keyWords: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -530,6 +535,39 @@ export interface ApiConditionsOfUseConditionsOfUse
     metaDescription: Schema.Attribute.Text;
     metaTitle: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiContactContact extends Struct.SingleTypeSchema {
+  collectionName: 'contacts';
+  info: {
+    description: '';
+    displayName: 'Contact';
+    pluralName: 'contacts';
+    singularName: 'contact';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    data: Schema.Attribute.Component<'elements.contact', true>;
+    keyWords: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contact.contact'
+    > &
+      Schema.Attribute.Private;
+    metaDescription: Schema.Attribute.Text;
+    metaTitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    Title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -554,6 +592,7 @@ export interface ApiCookiePolicyCookiePolicy extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     description: Schema.Attribute.RichText;
     heading: Schema.Attribute.String;
+    keyWords: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -588,6 +627,7 @@ export interface ApiGdprComplaintsPolicyGdprComplaintsPolicy
       Schema.Attribute.Private;
     description: Schema.Attribute.RichText;
     heading: Schema.Attribute.String;
+    keyWords: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -628,6 +668,7 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    social: Schema.Attribute.Component<'elements.social-media', true>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -654,6 +695,7 @@ export interface ApiHomePageHomePage extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
+    keyWords: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -688,6 +730,7 @@ export interface ApiKnowledgHubAndQaKnowledgHubAndQa
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     faq: Schema.Attribute.Component<'elements.faq-data', true>;
+    keyWords: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -720,6 +763,7 @@ export interface ApiKnowledgHubKnowledgHub extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    keyWords: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -754,6 +798,7 @@ export interface ApiPrivacyPolicyPrivacyPolicy extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     description: Schema.Attribute.RichText;
     heading: Schema.Attribute.String;
+    keyWords: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -792,6 +837,7 @@ export interface ApiSecondPageSecondPage extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
+    keyWords: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -828,6 +874,7 @@ export interface ApiThirdPageThirdPage extends Struct.SingleTypeSchema {
     headding: Schema.Attribute.Text;
     images: Schema.Attribute.Component<'elements.images', false>;
     img: Schema.Attribute.Component<'elements.images', false>;
+    keyWords: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1357,6 +1404,7 @@ declare module '@strapi/strapi' {
       'api::blog-cart.blog-cart': ApiBlogCartBlogCart;
       'api::choosing-flocus-kapok.choosing-flocus-kapok': ApiChoosingFlocusKapokChoosingFlocusKapok;
       'api::conditions-of-use.conditions-of-use': ApiConditionsOfUseConditionsOfUse;
+      'api::contact.contact': ApiContactContact;
       'api::cookie-policy.cookie-policy': ApiCookiePolicyCookiePolicy;
       'api::gdpr-complaints-policy.gdpr-complaints-policy': ApiGdprComplaintsPolicyGdprComplaintsPolicy;
       'api::global.global': ApiGlobalGlobal;

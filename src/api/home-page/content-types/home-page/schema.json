@@ -29,6 +29,9 @@
     },
     "metaDescription": {
       "type": "text"
+    },
+    "keyWords": {
+      "type": "text"
     }
   }
 }

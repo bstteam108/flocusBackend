@@ -26,6 +26,11 @@
       "type": "component",
       "repeatable": true,
       "component": "layout.footer"
+    },
+    "social": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.social-media"
     }
   }
 }

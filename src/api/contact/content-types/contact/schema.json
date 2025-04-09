@@ -1,24 +1,23 @@
 {
   "kind": "singleType",
-  "collectionName": "knowledg_hubs",
+  "collectionName": "contacts",
   "info": {
-    "singularName": "knowledg-hub",
-    "pluralName": "knowledg-hubs",
-    "displayName": "Knowledg Hub",
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Contact",
     "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "title": {
+    "Title": {
       "type": "string"
     },
-    "blocks": {
-      "type": "dynamiczone",
-      "components": [
-        "blocks.banner-section"
-      ]
+    "data": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.contact"
     },
     "metaTitle": {
       "type": "text"

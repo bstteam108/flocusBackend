@@ -57,6 +57,18 @@ export interface ElementsCardSection extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsContact extends Struct.ComponentSchema {
+  collectionName: 'components_elements_contacts';
+  info: {
+    displayName: 'Contact';
+  };
+  attributes: {
+    description: Schema.Attribute.RichText;
+    image: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface ElementsFaq extends Struct.ComponentSchema {
   collectionName: 'components_elements_faqs';
   info: {
@@ -129,6 +141,17 @@ export interface ElementsLogo extends Struct.ComponentSchema {
   };
 }
 
+export interface ElementsSocialMedia extends Struct.ComponentSchema {
+  collectionName: 'components_elements_social_medias';
+  info: {
+    displayName: 'SocialMedia';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images'>;
+    Link: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutFooter extends Struct.ComponentSchema {
   collectionName: 'components_layout_footers';
   info: {
@@ -161,12 +184,14 @@ declare module '@strapi/strapi' {
       'blocks.info-block': BlocksInfoBlock;
       'elements.card': ElementsCard;
       'elements.card-section': ElementsCardSection;
+      'elements.contact': ElementsContact;
       'elements.faq': ElementsFaq;
       'elements.faq-data': ElementsFaqData;
       'elements.images': ElementsImages;
       'elements.link': ElementsLink;
       'elements.list': ElementsList;
       'elements.logo': ElementsLogo;
+      'elements.social-media': ElementsSocialMedia;
       'layout.footer': LayoutFooter;
       'layout.header': LayoutHeader;
     }
