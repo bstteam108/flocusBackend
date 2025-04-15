@@ -4,7 +4,7 @@
   "info": {
     "singularName": "blog-cart",
     "pluralName": "blog-carts",
-    "displayName": "Blog Cart",
+    "displayName": "Blogs",
     "description": ""
   },
   "options": {
@@ -30,6 +30,10 @@
     },
     "date": {
       "type": "date"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }

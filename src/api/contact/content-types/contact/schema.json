@@ -27,6 +27,12 @@
     },
     "keyWords": {
       "type": "text"
+    },
+    "formTitle": {
+      "type": "string"
+    },
+    "formPragraph": {
+      "type": "string"
     }
   }
 }

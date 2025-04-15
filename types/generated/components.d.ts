@@ -7,7 +7,7 @@ export interface BlocksBannerSection extends Struct.ComponentSchema {
     displayName: 'Banner Section';
   };
   attributes: {
-    headdin: Schema.Attribute.String;
+    heading: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'videos'>;
     logo: Schema.Attribute.Component<'elements.logo', false>;
   };

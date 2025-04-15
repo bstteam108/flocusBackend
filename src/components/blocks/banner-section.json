@@ -20,7 +20,7 @@
         "videos"
       ]
     },
-    "headdin": {
+    "heading": {
       "type": "string"
     }
   }

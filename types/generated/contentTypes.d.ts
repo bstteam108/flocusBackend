@@ -443,7 +443,7 @@ export interface ApiBlogCartBlogCart extends Struct.CollectionTypeSchema {
   collectionName: 'blog_carts';
   info: {
     description: '';
-    displayName: 'Blog Cart';
+    displayName: 'Blogs';
     pluralName: 'blog-carts';
     singularName: 'blog-cart';
   };
@@ -464,6 +464,7 @@ export interface ApiBlogCartBlogCart extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -557,6 +558,8 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     data: Schema.Attribute.Component<'elements.contact', true>;
+    formPragraph: Schema.Attribute.String;
+    formTitle: Schema.Attribute.String;
     keyWords: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -818,7 +821,7 @@ export interface ApiSecondPageSecondPage extends Struct.SingleTypeSchema {
   collectionName: 'second_pages';
   info: {
     description: '';
-    displayName: 'Second Page';
+    displayName: '  What Is Kapok';
     pluralName: 'second-pages';
     singularName: 'second-page';
   };
@@ -858,7 +861,7 @@ export interface ApiThirdPageThirdPage extends Struct.SingleTypeSchema {
   collectionName: 'third_pages';
   info: {
     description: '';
-    displayName: 'Third Page';
+    displayName: 'Do You Know How Kapok Is Processed';
     pluralName: 'third-pages';
     singularName: 'third-page';
   };
